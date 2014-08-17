@@ -7,7 +7,7 @@ RequreNpmTasks = { #{{{1
   # Converting files
   coffee: 'grunt-contrib-coffee'
   jade:   'grunt-contrib-jade'
-  sass:   'grunt-contrib-sass'
+  sass:   'grunt-sass'
 
   # Clean Up
   clean: 'grunt-contrib-clean'
@@ -29,7 +29,7 @@ RequreNpmTasks = { #{{{1
   # Minification/Optimisation tools
   usemin: 'grunt-usemin'
 } #}}}
-# User settings {{{1============================================================
+# User settings {{{1===========================================================
 DefaultTask = 'livedev'
 
 SourceConfig =
@@ -116,14 +116,14 @@ InjectorConfig = #{{{2
       transform: (filePath)->
         src = SourceConfig.src
         filePath = filePath.replace('/' + src + '/app/', '')
-        return '@import \'' + filePath + '\''
+        return '@import \'' + filePath + '\';'
       starttag: '// injector'
       endtag: '// endinjector'
     files:
-      '<%= src.src %>/app/app.sass': \
+      '<%= src.src %>/app/app.scss': \
       [
-        '<%= src.src %>/app/**/*.sass'
-        '!<%= src.src %>/app/app.sass'
+        '<%= src.src %>/app/**/*.{scss,sass}'
+        '!<%= src.src %>/app/app.{scss,sass}'
       ]
 
   css:
@@ -183,7 +183,7 @@ SassConfig = #{{{2
     expand: true
     cwd: '<%= src.src %>'
     src: [
-      'app/app.sass'
+      'app/app.{scss,sass}'
     ]
     dest: '<%= src.dest %>'
     ext: '.css'
@@ -199,9 +199,9 @@ WatchConfig = #{{{2
     tasks: ['newer:injector:scripts', 'newer:coffee']
   sass:
     files: [
-      '<%= src.src %>/**/*.sass'
+      '<%= src.src %>/**/*.{scss,sass}'
     ]
-    tasks: ['newer:injector:sass', 'newer:sass', 'injector:css']
+    tasks: ['injector:sass', 'sass', 'injector:css']
   jade:
     files: [
       '<%= src.src %>/**/*.jade'
@@ -225,6 +225,14 @@ WatchConfig = #{{{2
     ]
     options:
       livereload: true
+  express:
+    files: [
+      'server/**/*.coffee'
+    ]
+    tasks: ['express:dev', 'wait']
+    options:
+      livereload: true
+      nospawn: true
 
 ExpressConfig = #{{{2
   dev: 

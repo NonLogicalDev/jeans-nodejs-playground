@@ -1,21 +1,25 @@
-# app = angular.module 'Playground'
-app.config ($stateProvider, $urlRouterProvider)->
+###############################################################################
+#                             Main Controller
+###############################################################################
+angular.module('Playground')
+
+.config ($stateProvider, $urlRouterProvider)->
   router = $stateProvider
   $urlRouterProvider.when '/', '/home'
-  $urlRouterProvider.when '/zomg', '/home'
 
   router.state "home",
     url: '/home'
     templateUrl: 'app/main/main.html'
     controllerProvider: 'MainController'
 
-class MainController extends @BaseCtrl
-  @register app
-  @inject '$scope'
-
-  initialize: ->
-    @$scope.name = 'MainController'
-
-  greeting: ->
+.controller 'MainController', ($scope, $http) ->
+  $scope.greeting = ->
     "Hello Citizen!"
+
+  $scope.name = "MainController"
+
+  $scope.getServerMessages = ->
+    $http.get('/api/test_data').success (data, status)->
+      console.log data
+      $scope.messages = data
 

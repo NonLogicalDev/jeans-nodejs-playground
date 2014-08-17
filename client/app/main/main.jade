@@ -1,6 +1,17 @@
-h1(data-ng-controller="MainController").text-center
-  "{{ greeting() }} This is {{ name }} speaking!"
+.container(data-ng-controller="MainController")#MainController
+  h1.text-center
+    "{{ greeting() }} This is {{ name }} speaking!"
 
-p.text-center.
-  I must assure you, that it is a great pleasure displaying
-  this text for you!
+  p.text-center.
+    I must assure you, that it is a great pleasure displaying
+    this text for you!
+
+  .row 
+    .text-center
+      button(data-ng-click="getServerMessages()").btn.btn-primary.btn-special.
+        Get Server Messages
+
+  .row
+    .col-md-8.col-md-offset-2
+      pre(ng-animate="'animate'" data-ng-repeat="message in messages")
+        {{ message.message }}

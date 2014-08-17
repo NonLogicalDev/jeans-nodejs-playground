@@ -4,10 +4,10 @@ Errors = require './components/errors'
 module.exports = (app)->
   root = app.get('root')
 
-  # I will put my api's here
-  #
-  #
+  # Put your API routes here
+  app.use '/api/test_data', require './api/test_data'
 
+  
   # All undefined asset or api routes should return a 404
   app.route '/:url(api|auth|app|vendor|assets)/*'
    .get(Errors[404])
