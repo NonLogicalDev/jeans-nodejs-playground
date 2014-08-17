@@ -26,8 +26,8 @@ After you come back frome the quest having obtained those three items
 wisper this into your terminal:
 
 ```bash
-$ git clone <repo address here>
-$ cd <repo name>
+$ git clone git://github.com/NonLogicalDev/jeans-nodejs-playground
+$ cd jeans-nodejs-playground
 $ npm install
 $ bower install
 ```
