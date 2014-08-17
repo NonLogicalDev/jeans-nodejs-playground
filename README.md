@@ -15,12 +15,18 @@ generator. That thing is amazing, but it was too bulky for my taste.
 
 ## Installation
 
-There are four requirenments:
+There are just two requirenments:
 
 * Node.js
-* Bower
-* Sass gem (Which means ruby... =( You gotta pay for convenience.)
-* Grunt-cli
+* Ruby
+
+You need `Bower`, `Grunt` Node packages and a `Sass` gem. The commands to install them below:
+
+```bash
+$ npm install -g grunt-cli
+$ npm install -g bower
+$ gem install sass
+```
 
 After you come back frome the quest having obtained those three items
 wisper this into your terminal:
