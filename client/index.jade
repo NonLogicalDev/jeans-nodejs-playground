@@ -1,0 +1,39 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    // Vendor Styles 
+    // build:js(client) app/vendor.css 
+    // bower:css
+    link(rel='stylesheet', href='vendor/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='vendor/angular-motion/dist/angular-motion.min.css')
+    // endbower 
+    // endbuild 
+
+    // Custom Styles that override vendor (added after conversion to html)
+    // injector:css 
+    // endinjector 
+
+  body(ng-app="Playground")
+
+    // Your view goes here 
+    ui-view
+
+    // Vendor scripts 
+    // bower:js
+    script(src='vendor/jquery/dist/jquery.js')
+    script(src='vendor/angular/angular.js')
+    script(src='vendor/bootstrap/dist/js/bootstrap.js')
+    script(src='vendor/angular-animate/angular-animate.js')
+    script(src='vendor/angular-strap/dist/angular-strap.min.js')
+    script(src='vendor/angular-strap/dist/angular-strap.tpl.min.js')
+    script(src='vendor/angular-ui-router/release/angular-ui-router.js')
+    // endbower 
+
+    // App Scripts 
+    // injector:js
+    script(src="app/app.js")
+    script(src="app/main/main.js")
+    // endinjector 
