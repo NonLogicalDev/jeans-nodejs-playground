@@ -26,15 +26,21 @@ for it.
 
 Simple hack friendly set up.
 
+## A lot of tedious work is automated already
+
+I set up a Gruntfile with most of the task you will need for happy hacking.
+
 Need a frontend library/css framework?
 
 ```bash
 bower install <library_name> --save && grunt wiredep
 ```
 
-And you are good to go. It will be included in the `index.jade` file.
+And you are good to go. It will be already included in the `index.jade` file.
 
 ## Installation
+
+Lets get to installation!
 
 There are just two requirenments:
 
