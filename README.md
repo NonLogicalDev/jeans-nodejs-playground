@@ -55,7 +55,7 @@ $ npm install -g bower
 $ gem install sass
 ```
 
-After you come back frome the quest having obtained those three items
+After you come back from the quest having obtained those three items
 wisper this into your terminal:
 
 ```bash
