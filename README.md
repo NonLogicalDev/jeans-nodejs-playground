@@ -42,12 +42,19 @@ And you are good to go. It will be already included in the `index.jade` file.
 
 Lets get to installation!
 
-There are just two requirenments:
+**Option 1:** Super quick way, my script will check all dependencies and instruct you what to do
+```
+$ \curl -sSL http://goo.gl/l7IX2J > inst.sh && chmod u+x inst.sh && ./inst.sh
+```
+
+**Option 2:** Manual
+
+There are two main requirenments:
 
 * Node.js
 * Ruby
 
-You need `Bower`, `Grunt` Node packages and a `Sass` gem. The commands to install them below:
+You need also need `Bower`, `Grunt` Node packages and a `Sass/Scss` gems. The commands to install them below:
 
 ```bash
 $ npm install -g grunt-cli
