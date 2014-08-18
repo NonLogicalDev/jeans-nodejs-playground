@@ -21,8 +21,6 @@ for it.
 
 * There is one folder per every view in the client `app` folder.
 * There is one folder per API endpoint in the server `api` folder.
-* There is a coffeescript base class for quickly creating controllers in the `app.coffee` file.
-* You set up server api routes in the routes file and handle them in `api` folder.
 
 Simple hack friendly set up.
 
