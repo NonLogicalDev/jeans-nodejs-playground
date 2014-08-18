@@ -1,6 +1,6 @@
 # JEANS Playground
 
-**(J)ade, (E)xpress, (A)ngular, (N)ode, (S)ass**
+**(J)ade, (E)xpress, (A)ngular, (N)ode, (S)[a,c]ss**
 - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ## About
