@@ -43,7 +43,7 @@ Lets get to installation!
 **Option 1:** Super quick way, my script will check all dependencies and instruct you what to do
 
 ```
-$ \curl -sSL http://goo.gl/Blphg1 > inst.sh && chmod u+x inst.sh && ./inst.sh
+$ \curl -sSL http://goo.gl/KbmYR7 > inst.sh && chmod u+x inst.sh && ./inst.sh
 ```
 
 **Option 2:** Manual
