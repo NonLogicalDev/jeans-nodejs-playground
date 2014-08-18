@@ -26,7 +26,7 @@ Simple hack friendly set up.
 
 ## A lot of tedious work is automated already
 
-I set up a Gruntfile with most of the task you will need for happy hacking.
+I set up a Gruntfile with most of the tasks you will need for happy hacking.
 
 Need a frontend library/css framework?
 
